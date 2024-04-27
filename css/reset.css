@@ -9,8 +9,11 @@
     box-sizing: border-box;
     cursor: default;
     font-family: "Montserrat";
-    scroll-behavior: smooth;
     color: #fff;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 .wrapper{
