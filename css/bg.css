@@ -1,5 +1,53 @@
 
 
+
+
+
+
+.bg__circle__border{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -65%);
+    width: 600px;
+    height: 200px;
+    /* background: repeating-conic-gradient(from var(--a), transparent 0%, transparent 25%, rgba(255,255,255,.3) 50%, transparent 75%, transparent 100%); */
+    background: repeating-conic-gradient(from var(--a), transparent 0%, rgba(255,255,255,.3) 25%, transparent 50%, rgba(255,255,255,.3) 75%, transparent 100%);
+    animation: borderGrad 1s infinite linear;
+    border-radius: 50%;
+    z-index: -1;
+    display: grid;
+    place-items: center;
+
+    /* opacity: 0; */
+}
+
+.bg__circle{
+    background-color: #06020F;
+    border-radius: 50%;
+    /* padding: 5px; */
+    width: 98%;
+    height: 94%;
+}
+
+
+@property --a {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+@keyframes borderGrad {
+    0% {
+        --a: 0deg;
+    }
+
+    100% {
+        --a: 360deg;
+    }
+}
+
+
 .bg__line{
     position: absolute;
     /* width: 20vw; */

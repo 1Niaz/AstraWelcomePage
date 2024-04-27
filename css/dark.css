@@ -35,10 +35,34 @@ body {
     font-weight: bold;
 }
 
+.main__title{
+    text-shadow: none;
+    animation: 3s text_shadow infinite ease-out, 5s fly infinite ease-out;
+}
+
+@keyframes text_shadow {
+    0%, 100%{
+        text-shadow: none;
+    }
+    50%{
+        text-shadow: 0 0 20px #fff;
+    }
+}
+
+@keyframes fly {
+    0%, 100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(20px);
+    }
+}
+
 .desc {
     /* color: rgba(0, 0, 0, 0.5); */
     color: rgba(255, 255, 255, 0.5);
     font-size: 32px;
+    z-index: 100;
 }
 
 .btn {
